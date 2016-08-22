@@ -10,21 +10,32 @@
   <body>
     <div class="container">
       <div class="row">
-        <h1>Places To Visit</h1>
+        <h1>Places You've Visited</h1>
         <div class="col-md-6">
-          <h3>Click on a city to find out more</h3>
-          <ul>
-            <li>Penang</li>
-            <li>Paris</li>
-            <li>London</li>
-            <li>Buenos Aires</li>
-          </ul>
+          <form>
+            <div class="form-group">
+              <h4>What city did you go to?</h4>
+              <input type="text" class="form-control" id="city" placeholder="Name of city">
+            </div>
+            <div class="form-group">
+              <h4>What language do they speak there?</h4>
+              <input type="text" class="form-control" id="language" placeholder="What language?">
+            </div>
+            <div class="form-group">
+              <h4>What activity did you do while you were there?</h4>
+              <input type="text" class="form-control" id="activity" placeholder="What did you do there?">
+            </div>
+            <button type="submit" class="btn">Add</button>
+          </form>
+          <div>
+            <ul id="list">
+            </ul>
+          </div>
         </div>
         <div class="col-md-6" id="moreInfo">
-          <h3>More info on <span class="cityName"></span></h3>
-          <p id="country">Country: </p>
-          <p id="language">Primary Language: </p>
-          <p id="temp">Climate: </p>
+          <h3>Here is more information on <span id="userCity"></span></h3>
+          <p id="userLang">Language: </p>
+          <p id="userActivity">Activity: </p>
         </div>
       </div>
     </div>

@@ -1,16 +1,31 @@
 //business logic
-function Cityinfo (country, tempurature, language) {
-  this.cityCountry = country;
-  this.cityTemp = tempurature;
+function Cityinfo (city, language, activity) {
+  this.cityName = city;
   this.cityLang = language;
+  this.cityActivity = activity;
 }
 
-var Penang = new Cityinfo("Malaysia", "high", "Malay");
+
 
 //ui logic
 $(document).ready(function(){
-  $("ul").click(function(event){
-    $("#moreInfo").show();
-    $("#country").append(Penang.cityCountry);
-  })
+ $("form").submit(function(event){
+   event.preventDefault();
+
+   var inputCity = $("input#city").val();
+   var inputLanguage = $("input#language").val();
+   var inputActivity = $("input#activity").val();
+
+   var newCity = new Cityinfo(inputCity, inputLanguage, inputActivity);
+
+   $("#list").append("<li><span class='clickable'>" + newCity.cityName + "</span></li>");
+
+   $(".clickable").last().click(function(){
+     $("#moreInfo").show();
+     $("#userCity").text(newCity.cityName);
+     $("#userLang").append(newCity.cityLang);
+     $("#userActivity").append(newCity.cityActivity);
+   });
+
+ });
 });
