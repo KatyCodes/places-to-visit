@@ -23,8 +23,8 @@ $(document).ready(function(){
    $(".clickable").last().click(function(){
      $("#moreInfo").show();
      $("#userCity").text(newCity.cityName);
-     $("#userLang").append(newCity.cityLang);
-     $("#userActivity").append(newCity.cityActivity);
+     $("#userLang").text("The language in " + newCity.cityName + " is : " + newCity.cityLang);
+     $("#userActivity").text("What activity I did : " + newCity.cityActivity);
    });
 
  });

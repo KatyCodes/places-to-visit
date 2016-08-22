@@ -1,3 +1,41 @@
+body{
+  font-family: 'Quicksand', sans-serif;
+  background-image: url("../img/pic.jpeg");
+}
+h1{
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  color: #fff;
+}
+ul li {
+  list-style-type: none;
+  text-align: center;
+}
 #moreInfo {
   display: none;
+}
+#userInput {
+  background-color: white;
+  border-radius: 7px;
+  padding: 3rem;
+  opacity: .8.9;
+}
+#moreInfo {
+  padding: 3rem;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+}
+.col-md-6 {
+  margin-top:6rem;
+}
+.clickable {
+  cursor: pointer;
+  color:  #8f35e3;
+  font-size: 20px;
+}
+.clickable:hover{
+  font-size: 25px;
+  color: #000;
 }
